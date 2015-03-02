@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Linked Open Election Data Sample</title>
+
+<link rel="prefetch" href="http://sparql.org/sparql?query=select+*+from+%3Chttp%3A%2F%2Fwww.w3.org%2F2012%2FpyMicrodata%2Fextract%3Furi%3Dhttp%253A%252F%252Flinkedopendatang.com%252Fschemas%252Felection%252Fsample_microdata.html%26format%3Dturtle%3E%0D%0Awhere+%7B%0D%0A%3Fs+%3Fp+%3Fo%0D%0A%0D%0A%7D&default-graph-uri=&output=text&stylesheet=%2Fxml-to-html.xsl" />		
+<link rel="alternate" title="Election Data in RDF Linked Data form" type="application/rdf+xml" href="http://linkeddata.uriburner.com/about/id/http://linkedopendatang.com/schemas/election/sample_microdata.html"/>
+<link rel="prefetch" href="http://linkeddata.uriburner.com/about/id/http://linkedopendatang.com/schemas/election/sample_microdata.html"/>
+
+<script type="text/javascript">
+document.createElement("header");
+document.createElement("nav");
+document.createElement("article");
+document.createElement("section");
+document.createElement("footer");
+</script>
+
+<!-- your CSS rule here  -->
+
+<style type="text/css">
+header,nav,section,article,footer {
+	padding: 4px;
+	margin: 4px;
+	display: block;
+}
+
+header {
+	background: #330066;
+	color: #fff;
+}
+
+nav {
+	border: 4px solid #330066;
+}
+
+section {
+	border: 4px #333333;
+}
+
+article {
+	border: 2px dotted #333333;
+}
+
+figure {
+	border: 1px solid #333333;
+	padding-left: 1em;
+}
+
+footer {
+	border: 1px dotted #333333;
+	text-align: center;
+}
+
+
+</style>
+</head>
+<body>
+<header role="banner">
+<h1>Linked Open Election Data Sample (microdata)</h1>
+</header>
+
+<nav>
+<ul itemscope itemtype="http://schema.org/SiteNavigationElement" itemid="#nav">
+	<li><a href="http://linkedopendatang.com/schemas/election/about.html" itemprop="url" ><span itemprop="name">About
+	Linked Open Election Framework</span></a></li>
+	<li><a 
+		href="http://sparql.org/sparql?query=select+*+from+%3Chttp%3A%2F%2Fwww.w3.org%2F2012%2FpyMicrodata%2Fextract%3Furi%3Dhttp%253A%252F%252Flinkedopendatang.com%252Fschemas%252Felection%252Fsample_microdata.html%26format%3Dturtle%3E%0D%0Awhere+%7B%0D%0A%3Fs+%3Fp+%3Fo%0D%0A%0D%0A%7D&default-graph-uri=&output=text&stylesheet=%2Fxml-to-html.xsl" itemprop="url"><span itemprop="name">RDF extracted via SPARQL</span>
+	 </a></li>
+</ul>
+</nav>
+
+<section>
+<article>
+	<a name="mainnews" />
+	<!-- We start by defining what this page is all about (NewsArticle, TechArticle, BlogPost, etc). -->
+	<div itemscope itemtype="http://schema.org/NewsArticle" itemid="#mainnews">
+
+	<!-- define headline and name of article. -->
+	<h1 itemprop="name headline">Fayose Wins Ekiti </h1>
+	
+	<!-- declare author. -->
+	<div itemprop="author creator" itemscope itemtype="http://schema.org/Person" itemid="#creator">
+		<strong>Author:</strong>  <a href="https://plus.google.com/+EmekaOkoye/" rel="publisher" itemprop="url"><span itemprop="name">Emeka Okoye</span></a><br />
+		<meta itemprop="sameAs" content="http://id.myopenlink.net/dataspace/person/emekaokoye#this"/>
+	</div>
+
+	<!-- define topics or tags. -->
+   <strong>Topics:</strong> 
+   <span itemprop="about" itemscope itemtype="http://schema.org/Thing" itemid="http://dbpedia.org/resource/Election">
+    <a href="http://en.wikipedia.org/wiki/Election" itemprop="url"><span itemprop="name">Election</span></a>
+    </span>,
+	<span itemprop="about" itemscope itemtype="http://schema.org/Thing" itemid="http://dbpedia.org/resource/Elections_in_Nigeria">
+    <a href="http://en.wikipedia.org/wiki/Elections_in_Nigeria" itemprop="url"><span itemprop="name">Elections in Nigeria</span></a>
+    </span>,
+	<span itemprop="about" itemscope itemtype="http://schema.org/Thing" itemid="http://dbpedia.org/resource/Ekiti_State">
+    <a href="http://en.wikipedia.org/wiki/Ekiti_State" itemprop="url"><span itemprop="name">Ekiti State</span></a>
+    </span>,
+	<span itemprop="about" itemscope itemtype="http://schema.org/Thing" itemid="http://dbpedia.org/resource/Kayode_Fayemi">
+    <a href="http://en.wikipedia.org/wiki/Kayode_Fayemi" itemprop="url"><span itemprop="name">Kayode Fayemi</span></a>
+    </span>,
+	<span itemprop="about" itemscope itemtype="http://schema.org/Thing" itemid="http://dbpedia.org/resource/Ayo_Fayose">
+    <a href="http://en.wikipedia.org/wiki/Ayo_Fayose" itemprop="url"><span itemprop="name">Ayo Fayose</span></a>
+    </span>,
+	<span itemprop="about" itemscope itemtype="http://schema.org/Thing" itemid="http://dbpedia.org/resource/People%27s_Democratic_Party_(Nigeria)">
+    <a href="http://en.wikipedia.org/wiki/People%27s_Democratic_Party_(Nigeria)" itemprop="url"><span itemprop="name">PDP</span></a>
+    </span>,
+	<span itemprop="about" itemscope itemtype="http://schema.org/Thing" itemid="http://dbpedia.org/resource/Labour_Party_(Nigeria)">
+    <a href="http://en.wikipedia.org/wiki/Labour_Party_(Nigeria)" itemprop="url"><span itemprop="name">LP</span></a>
+    </span>,
+	<span itemprop="about" itemscope itemtype="http://schema.org/Thing" itemid="http://dbpedia.org/resource/All_Progressives_Congress">
+    <a href="http://en.wikipedia.org/wiki/All_Progressives_Congress" itemprop="url"><span itemprop="name">APC</span></a>
+    </span> <br />
+	
+
+  	<!-- define body of article. -->
+	<div itemprop="articleBody">
+		<p>The Peoples Democratic Party (PDP) candidate has been elected Governor of Ekiti State, after winning the gubernatorial elections that took place on June 21, 2014. Fayose polled 203,090 votes, beating the incumbent Governor Kayode Fayemi who could only gather 120,433 votes.</p>
+
+		<p>The Returning Officer for the 2014 governorship elections and Vice Chancellor of the Federal University of Oye, Ekiti, Professor Isaac Azuzu, announced the results early this morning, June 22, 2014.</p>
+
+		<p>Fayose, was governor of Ekiti State from May 29, 2003 to October 16, 2006. </p>
+
+	</div>
+	
+	<!-- define and setup your poll  -->
+	<!-- A Poll has the following properties  -->
+	<div itemscope itemtype="http://linkedopendatang.com/schemas/election#Poll" itemid="#poll">
+		<h3>2014 Governorship Election Results for Ekiti State</h3>
+		
+		<!-- define constituency  -->
+		<p><strong>Constituency:</strong> <a itemprop="hasConstituency" href="http://dbpedia.org/resource/Ekiti_State">Ekiti State</a></p>
+		
+		<!-- define poll date  -->
+		<p><strong>Election Date:</strong> <meta content="2014-06-21" itemprop="hasElectionDate"/>June 21, 2014</p>
+		
+		<!-- define poll's registered voters  -->
+		<p><strong>Registered Voters:</strong> <span itemprop="hasRegisteredVoters">733766</span></p>
+		
+		<!-- define poll's accredited voters  -->
+		<p><strong>Accredited Voters:</strong> <span itemprop="hasAccreditedVoters">369257</span></p>
+		
+		<!-- define total ballot papers used  -->
+		<p><strong>Total Ballot Papers Used: </strong><span itemprop="hasTotalBallots">360455</span></p>
+		
+		<!-- define total invalid votes  -->
+		<p><strong>Invalid Votes: </strong><span itemprop="hasInvalidBallots">10089</span></p>
+		
+		<!-- define total valid votes  -->
+		<p><strong>Valid Votes: </strong><span itemprop="hasValidBallots">350366</span></p>
+		
+		<!-- define reported violence  -->
+		<p><strong>Any Reported Violence: </strong><span itemprop="hasViolence">False</span></p>
+		
+		<!-- define reported fraud  -->
+		<p><strong>Any Reported Fraud: </strong><span itemprop="hasElectoralFraud">False</span></p>
+
+
+		<!-- Define your candidates  -->
+		<!-- candidate 1  -->
+		<p><strong>Candidate 1 </strong></p>
+		<div itemprop="isCandidate" itemscope itemtype="http://linkedopendatang.com/schemas/election#Candidate" itemid="#candidate1">
+			<dl>
+				<!-- define candidate's name  -->
+				<dt>Candidate's Name </dt>
+				<dd><div itemprop="hasName" itemscope itemtype="http://schema.org/Person" itemid="#fayose"><span itemprop="name">Ayodele Peter Fayose</span>
+				<meta itemprop="sameAs" content="http://dbpedia.org/resource/Ayo_Fayose"/>
+				</div>
+				</dd> 
+
+				<!-- define candidate's party  -->
+				<dt>Candidate's Party </dt>
+				<dd><a itemprop="isOfPoliticalParty" href="http://linkedopendatang.com/entity/ngpoliticalparty.ttl#pdp">PDP</a></dd>
+
+				<!-- define candidate's votes  -->
+				<dt>Candidate's Votes </dt>
+				<dd><span itemprop="hasVotes">203090</span></dd>
+
+				<!-- define candidate's success  -->
+				<dt>Elected? </dt>
+				<dd><span itemprop="isElected">True</span></dd>
+		
+			</dl>
+		</div>
+		
+		
+		
+		 
+		<!-- candidate 2  -->
+		<p><strong>Candidate 2 </strong></p>
+		<div itemprop="isCandidate" itemscope itemtype="http://linkedopendatang.com/schemas/election#Candidate" itemid="#candidate2">
+			<dl>
+				<!-- define candidate's name  -->
+				<dt>Candidate's Name </dt>
+				<dd><div itemprop="hasName" itemscope itemtype="http://schema.org/Person" itemid="#fayemi"><span itemprop="name">John Olukayode Fayemi</span>
+				<meta itemprop="sameAs" content="http://dbpedia.org/resource/Kayode_Fayemi"/>
+				</div>
+				</dd> 
+
+				<!-- define candidate's party  -->
+				<dt>Candidate's Party </dt>
+				<dd><a itemprop="isOfPoliticalParty" href="http://linkedopendatang.com/entity/ngpoliticalparty.ttl#apc">APC</a></dd>
+
+				<!-- define candidate's votes  -->
+				<dt>Candidate's Votes </dt>
+				<dd><span itemprop="hasVotes">120433</span></dd>
+
+				<!-- define candidate's success  -->
+				<dt>Elected? </dt>
+				<dd><span itemprop="isElected">false</span></dd>
+		
+			</dl>
+		</div>
+		
+		
+		<!-- candidate 3  -->
+		<p><strong>Candidate 3 </strong></p>
+		<div itemprop="isCandidate" itemscope itemtype="http://linkedopendatang.com/schemas/election#Candidate" itemid="#candidate3">
+			<dl>
+				<!-- define candidate's name  -->
+				<dt>Candidate's Name </dt>
+				<dd><div itemprop="hasName" itemscope itemtype="http://schema.org/Person" itemid="#opeyemi"><span itemprop="name">Bamidele Michael Opeyemi</span></div>
+				</dd> 
+
+				<!-- define candidate's party  -->
+				<dt>Candidate's Party </dt>
+				<dd><a itemprop="isOfPoliticalParty" href="http://linkedopendatang.com/entity/ngpoliticalparty.ttl#lp">LP</a></dd>
+
+				<!-- define candidate's votes  -->
+				<dt>Candidate's Votes </dt>
+				<dd><span itemprop="hasVotes">18135</span></dd>
+
+				<!-- define candidate's success  -->
+				<dt>Elected? </dt>
+				<dd><span itemprop="isElected">false</span></dd>
+		
+			</dl>
+		</div>
+		
+		
+		
+		 
+		 
+	
+	
+
+	</div>
+	
+	<span
+    itemprop="copyrightHolder sourceOrganization provider"
+    itemscope
+    itemtype="http://schema.org/Organization"
+    itemid="http://linkedopendatang.blogspot.com">
+    <meta itemprop="name" content="Linked Open Data Nigeria" />
+    <meta itemprop="url" content="http://linkedopendatang.blogspot.com" />
+  </span>
+
+	
+	</div>
+</article>
+
+
+</section>
+
+
+<footer>
+&copy; Copyright <a href="http://linkedopendatang.blogspot.com">Linked Open data Nigeria</a>
+</footer>
+</body>
+</html>
+
