@@ -1,0 +1,275 @@
+
+#
+# An Ontology for Linked Open Election Data 
+#
+
+
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix schema: <http://schema.org/> .
+
+
+@prefix election: <http://linkedopendatang.com/schemas/election#> .
+
+<http://linkedopendatang.com/schemas/election/>
+	a owl:Ontology ;
+	rdfs:label "An Ontology for Linked Open Election Data" ;
+	cc:license <http://creativecommons.org/licenses/by-sa/3.0/> ;
+	dc:date "2014-11-01"^^xsd:date ;
+	foaf:maker <http://id.myopenlink.net/dataspace/person/emekaokoye#this> ;
+	rdfs:comment """This is a turtle document that uses Linked Data oriented content to describe an Ontology for Elections"""^^xsd:string ;
+   owl:versionInfo "0.1.0"^^xsd:string .
+
+<http://id.myopenlink.net/dataspace/person/emekaokoye#this> a foaf:Person ;
+  foaf:name "Emeka Okoye" .
+  
+#
+# Classes 
+#
+
+
+election:Object
+    a owl:Class;
+    rdfs:isDefinedBy <http://linkedopendatang.com/schemas/election/> ;
+    rdfs:label "ElectionObject" ;
+    rdfs:comment "A base class representing all Election objects" .
+	
+	
+election:PoliticalParty
+    a owl:Class;
+    rdfs:isDefinedBy <http://linkedopendatang.com/schemas/election/> ;
+    rdfs:subClassOf foaf:Organization, schema:Organization ;
+    rdfs:label "PoliticalParty" ;
+    rdfs:comment "A class representing a Political Party" .
+	
+	
+election:Candidate
+    a owl:Class;
+    rdfs:isDefinedBy <http://linkedopendatang.com/schemas/election/> ;
+    rdfs:subClassOf foaf:Person,schema:Person ;
+    rdfs:label "Candidate" ;
+    rdfs:comment "A class representing a Person seeking an elective office" .
+	
+	
+election:Poll
+    a owl:Class;
+    rdfs:isDefinedBy <http://linkedopendatang.com/schemas/election/> ;
+    rdfs:subClassOf election:Object ;
+    rdfs:subClassOf schema:Event ;
+    rdfs:label "Poll" ;
+    rdfs:comment "A class representing a voting event to select a political leader" .
+	
+	
+election:PollingBooth
+    a owl:Class;
+    rdfs:isDefinedBy <http://linkedopendatang.com/schemas/election/> ;
+    rdfs:subClassOf election:Poll ;
+    rdfs:label "PollingBooth" ;
+    rdfs:comment "A booth where a voting event to select a political leader is held" .
+	
+	
+election:Election
+    a owl:Class;
+    rdfs:isDefinedBy <http://linkedopendatang.com/schemas/election/> ;
+    rdfs:subClassOf election:Object ;
+    rdfs:subClassOf schema:Event ;
+    rdfs:label "Election" ;
+    rdfs:comment "A class representing a set of polls" .
+	
+	
+	
+	
+#
+# Properties 
+#
+
+	
+election:hasConstituency
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://linkedopendatang.com/schemas/election/> ;
+    rdfs:label "hasConstituency" ;
+    rdfs:comment "This property associates an instance of Poll or Candidate with an instance of Place" ;
+    rdfs:domain election:Poll,election:Candidate ;
+    rdfs:range schema:Place .
+	
+	
+election:isCandidate
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://linkedopendatang.com/schemas/election/> ;
+    rdfs:label "isCandidate" ;
+    rdfs:comment "This property associates an instance of Poll with an instance of Candidate" ;
+    rdfs:domain election:Poll ;
+    rdfs:range election:Candidate .
+	
+	
+election:hasVotes
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://linkedopendatang.com/schemas/election/> ;
+    rdfs:label "hasVotes" ;
+    rdfs:comment "This property associates an instance of Poll or PollingBooth with total votes casted" ;
+    rdfs:domain election:Poll,election:PollingBooth ;
+    rdfs:range xsd:integer .
+	
+	
+election:hasRegisteredVoters
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://linkedopendatang.com/schemas/election/> ;
+    rdfs:label "hasRegisteredVoters" ;
+    rdfs:comment "This property associates an instance of Poll with the total number of registered voters" ;
+    rdfs:domain election:Poll ;
+    rdfs:range xsd:integer .
+	
+	
+election:hasAccreditedVoters
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://linkedopendatang.com/schemas/election/> ;
+    rdfs:label "hasAccreditedVoters" ;
+    rdfs:comment "This property associates an instance of Poll with the total number of accredited voters" ;
+    rdfs:domain election:Poll ;
+    rdfs:range xsd:integer .
+	
+	
+election:hasTotalBallots
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://linkedopendatang.com/schemas/election/> ;
+    rdfs:label "hasTotalBallots" ;
+    rdfs:comment "This property associates an instance of Poll or PollingBooth with the total number of casted ballots" ;
+    rdfs:domain election:Poll,election:PollingBooth ;
+    rdfs:range xsd:integer .
+	
+	
+election:hasInvalidBallots
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://linkedopendatang.com/schemas/election/> ;
+    rdfs:label "hasInvalidBallots" ;
+    rdfs:comment "This property associates an instance of Poll or PollingBooth with the total number of invalid ballots" ;
+    rdfs:domain election:Poll,election:PollingBooth ;
+    rdfs:range xsd:integer .
+	
+election:hasValidBallots
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://linkedopendatang.com/schemas/election/> ;
+    rdfs:label "hasValidBallots" ;
+    rdfs:comment "This property associates an instance of Poll or PoollingBooth with the total number of valid ballots" ;
+    rdfs:domain election:Poll,election:PollingBooth ;
+    rdfs:range xsd:integer .
+	
+election:isOfPoliticalParty
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://linkedopendatang.com/schemas/election/> ;
+    rdfs:label "isOfPoliticalParty" ;
+    rdfs:comment "This property associates an instance of Candidate with an instance of PoliticalParty" ;
+    rdfs:domain election:Candidate ;
+    rdfs:range election:PoliticalParty .
+	
+election:hasName
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://linkedopendatang.com/schemas/election/> ;
+    rdfs:label "hasName" ;
+    rdfs:comment "This property associates an instance of Candidate with names" ;
+    rdfs:domain election:Candidate ;
+    rdfs:range foaf:Person,schema:Person .
+	
+	
+election:isElected
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://linkedopendatang.com/schemas/election/> ;
+    rdfs:label "elected" ;
+    rdfs:comment "This property associates an instance of Candidate with an elected status" ;
+    rdfs:domain election:Candidate ;
+    rdfs:range xsd:boolean .
+	
+	
+election:isWinner
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://linkedopendatang.com/schemas/election/> ;
+    rdfs:label "isWinner" ;
+    rdfs:comment "This property associates an instance of Candidate with a winner status" ;
+    rdfs:domain election:Candidate ;
+    rdfs:range xsd:boolean .
+	
+	
+election:hasViolence
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://linkedopendatang.com/schemas/election/> ;
+    rdfs:label "hasViolence" ;
+    rdfs:comment "This property associates an instance of Poll or PollingBooth with a violence status" ;
+    rdfs:domain election:Poll,election:PollingBooth ;
+    rdfs:range xsd:boolean .
+	
+	
+election:hasElectoralFraud
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://linkedopendatang.com/schemas/election/> ;
+    rdfs:label "hasElectoralFraud" ;
+    rdfs:comment "This property associates an instance of Poll or PollingBooth with electoral fraud status" ;
+    rdfs:domain election:Poll,election:PollingBooth ;
+    rdfs:range xsd:boolean .
+	
+	
+election:image
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://linkedopendatang.com/schemas/election/> ;
+    rdfs:label "image" ;
+    rdfs:comment "This property associates an instance of Candidate with an instance of foaf:depiction" ;
+    rdfs:domain election:Candidate ;
+    rdfs:range foaf:depiction .
+	
+	
+election:hasURL
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://linkedopendatang.com/schemas/election/> ;
+    rdfs:label "hasURL" ;
+    rdfs:comment "This property associates an instance of Candidate with a resource that has more information on Candidate" ;
+    rdfs:domain election:Candidate ;
+    rdfs:range xsd:anyURI .
+	
+	
+election:hasElectionDate
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://linkedopendatang.com/schemas/election/> ;
+    rdfs:label "hasElectionDate" ;
+    rdfs:comment "This property associates an instance of Poll with a date" ;
+    rdfs:domain election:Poll ;
+    rdfs:range xsd:date .
+	
+	
+election:hasGeoLat
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://linkedopendatang.com/schemas/election/> ;
+    rdfs:label "hasGeoLatitude" ;
+    rdfs:comment "This property associates an instance of PollingBooth with an instance of geo:lat" ;
+    rdfs:domain election:PollingBooth ;
+    rdfs:range geo:lat .
+	
+	
+election:hasGeoLong
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy <http://linkedopendatang.com/schemas/election/> ;
+    rdfs:label "hasGeoLongtitude" ;
+    rdfs:comment "This property associates an instance of PollingBooth with an instance of geo:long" ;
+    rdfs:domain election:PollingBooth ;
+    rdfs:range geo:long .
+	
+	
+#
+# todo 
+#
+# from revoda @en-gb
+#
+# inec -> INEC official arrival status {y|n|l} -> {yes,no,late}
+# mate -> Materials Availability status {y|n|l} -> {yes,no,late}
+# vote -> voting & accreditation status {y|n|l} -> {yes,no,late}
+# coll -> vote collation and count status {y|n|l} -> {yes,no,late}
+# anno -> Result Annoucement status {y|n} -> {yes,no}
+
+	
+	
+	
