@@ -38,4 +38,4 @@ The Linked Open Election Framework is supporting the publication of election res
 <p>No, just the same way to mark up HTML. This also works in Content Management and Blogging system.</p>
 		
 # Where can we get help or more information?		
-
+<p>Contact Emeka Okoye, <a href="mailto:emeka.okoye@gmail.com">emeka.okoye@gmail.com</a> 		</p>
