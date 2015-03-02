@@ -1,0 +1,345 @@
+@prefix schema: <http://schema.org/> .
+@prefix v: <http://www.w3.org/2006/vcard/ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dbpedia: <http://dbpedia.org/ontology/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix : <http://linkedopendatang.com/entity/ngpoliticalparty.ttl#> .
+
+<>
+    rdfs:comment "List of registered political parties in Nigeria" ;
+    dcterms:created "2014-12-01"^^<http://www.w3.org/2001/XMLSchema#date> ;
+    foaf:maker <http://id.myopenlink.net/dataspace/person/emekaokoye#this> ;
+    rdf:type foaf:Document ;
+    dcterms:hasFormat "text/turtle" ;
+	dcterms:source <http://www.inecnigeria.org/?page_id=18> ;
+    foaf:page <http://www.inecnigeria.org/?page_id=18> ;
+    rdfs:label "nigerianPoliticalParties" .
+
+
+:a a schema:Organization , foaf:Organization ;
+	rdfs:label "accord" ;
+	rdfs:comment "Accord Party" ;
+	skos:altLabel "Accord" ;
+	v:hasAddress [ a v:Home;
+	v:country-name "Nigeria" ;
+	v:street-address "plot 488, 7th Yauri Street, Area 3, Garki, Abuja" ];
+	v:hasTelephone [ a v:Home, v:Voice;
+	v:hasValue <tel:+2348062523829> ];
+	foaf:depiction <http://inecnigeria.org/inec/pix/A.jpg>   .
+	
+:aa a schema:Organization , foaf:Organization ;
+	rdfs:label "actionAlliance" ;
+	rdfs:comment "Action Alliance" ;
+	skos:altLabel "AA" ;
+	v:hasAddress [ a v:Home;
+	v:country-name "Nigeria" ;
+	v:street-address "Plot 1977 Orlu Street Area 3, Garki, Abuja. Email: actionalliancenigeria@gmail.com" ];
+	v:hasTelephone [ a v:Home, v:Voice;
+	v:hasValue <tel:+2348062523829> ];
+	foaf:depiction <http://inecnigeria.org/inec/pix/AA.jpg>  .
+	
+:acd a schema:Organization , foaf:Organization ;
+	rdfs:label "advancedCongressOfDemocrats" ;
+	rdfs:comment " Advanced Congress Of Democrats" ;
+	skos:altLabel "ACD" ;
+	v:hasAddress [ a v:Home;
+	v:country-name "Nigeria" ;
+	v:street-address "Suite C7, Patsy Plaza, After RCC Building, Along Jabi Road, Jabi-Abuja" ];
+	v:hasTelephone [ a v:Home, v:Voice;
+	v:hasValue <tel:+2347035821690> ];
+	foaf:depiction <http://inecnigeria.org/inec/pix/ACD.jpg>   .
+	
+:acpn a schema:Organization , foaf:Organization ;
+	rdfs:label "alliedCongressPartyofNigeria" ;
+	rdfs:comment "Allied Congress Party of Nigeria" ;
+	skos:altLabel "ACPN" ;
+	v:hasAddress [ a v:Home;
+	v:country-name "Nigeria" ;
+	v:street-address "13 Monrovia Sreet Wuse 11, by Banex, FCT Abuja" ];
+	v:hasTelephone [ a v:Home, v:Voice;
+	v:hasValue <tel:+2348038313424> ];
+	foaf:depiction <http://inecnigeria.org/inec/pix/ACPN.jpg>   .
+	
+:ad a schema:Organization , foaf:Organization ;
+	rdfs:label "allianceForDemocracy" ;
+	rdfs:comment "Alliance For Democracy" ;
+	skos:altLabel "AD" ;
+	v:hasAddress [ a v:Home;
+	v:country-name "Nigeria" ;
+	v:street-address "4 Aba Close, Area 8, Garki, Abuja" ];
+	v:hasTelephone [ a v:Home, v:Voice;
+	v:hasValue <tel:+2348100116284> ];
+	foaf:depiction <http://inecnigeria.org/inec/pix/AD.jpg> ;
+	owl:sameAs <http://dbpedia.org/resource/All_Progressives_Congress>  .
+	
+:adc a schema:Organization , foaf:Organization ;
+	rdfs:label "africanDemocraticCongress" ;
+	rdfs:comment "African Democratic Congress" ;
+	skos:altLabel "ADC" ;
+	v:hasAddress [ a v:Home;
+	v:country-name "Nigeria" ;
+	v:street-address "No. 1 Capital Plaza, Nyanyan-Kuru Road, Abuja" ];
+	v:hasTelephone [ a v:Home, v:Voice;
+	v:hasValue <tel:+2348059969415> ];
+	foaf:depiction <http://inecnigeria.org/inec/pix/ADC.jpg>   .
+	
+:apa a schema:Organization , foaf:Organization ;
+	rdfs:label "africanPeoplesAlliance" ;
+	rdfs:comment "African Peoples Alliance" ;
+	skos:altLabel "APA" ;
+	v:hasAddress [ a v:Home;
+	v:country-name "Nigeria" ;
+	v:street-address "7 Yauri Street, Area 11, Garki, Abuja" ];
+	v:hasTelephone [ a v:Home, v:Voice;
+	v:hasValue <tel:+2348033493571> ];
+	foaf:depiction <http://inecnigeria.org/inec/pix/APA.jpg>   .
+	
+:apga a schema:Organization , foaf:Organization ;
+	rdfs:label "allProgressivesGrandAlliance" ;
+	rdfs:comment "All Progressives Grand Alliance" ;
+	skos:altLabel "APGA" ;
+	v:hasAddress [ a v:Home;
+	v:country-name "Nigeria" ;
+	v:street-address "41b Libreville Crescent , Opp. Tulip Press, Aminu Kano Crescent , Wuse 11, Abuja" ];
+	v:hasTelephone [ a v:Home, v:Voice;
+	v:hasValue <tel:+2348084447444> ];
+	foaf:depiction <http://inecnigeria.org/inec/pix/APGA.jpg> ;
+	owl:sameAs <http://dbpedia.org/resource/All_Progressives_Congress>  .
+	
+:cpp a schema:Organization , foaf:Organization ;
+	rdfs:label "citizensPopularParty" ;
+	rdfs:comment "Citizens Popular Party" ;
+	skos:altLabel "CPP" ;
+	v:hasAddress [ a v:Home;
+	v:country-name "Nigeria" ;
+	v:street-address "No, 5 Church Avenue Old School Bus Stop Orozo Karshi Road FCT Abuja" ];
+	v:hasTelephone [ a v:Home, v:Voice;
+	v:hasValue <tel:+2348065933765> ];
+	foaf:depiction <http://inecnigeria.org/inec/pix/CPP.jpg>   .
+	
+:apc a schema:Organization , foaf:Organization ;
+	rdfs:label "allProgressivesCongress" ;
+	rdfs:comment "ALL PROGRESSIVES CONGRESS" ;
+	skos:altLabel "APC" ;
+	v:hasAddress [ a v:Home;
+	v:country-name "Nigeria" ;
+	v:street-address "No. 40 Blantyre Street, Wuse II, Abuja" ];
+	v:hasTelephone [ a v:Home, v:Voice;
+	v:hasValue <tel:+2348033345691> ];
+	foaf:depiction <http://inecnigeria.org/inec/pix/apclogo.jpg> ;
+	owl:sameAs <http://dbpedia.org/resource/All_Progressives_Congress>  .
+	
+:pdp a schema:Organization , foaf:Organization ;
+	rdfs:label "peoplesDemocraticParty" ;
+	rdfs:comment "Peoples Democratic Party" ;
+	skos:altLabel "PDP" ;
+	v:hasAddress [ a v:Home;
+	v:country-name "Nigeria" ;
+	v:street-address "Wadata Plaza , Michael Okpara Way , Zone 5, Wuse, Abuja" ];
+	v:hasTelephone [ a v:Home, v:Voice;
+	v:hasValue <tel:+2348037210583> ];
+	foaf:depiction <http://inecnigeria.org/inec/pix/PDP.jpg> ;
+	owl:sameAs <http://dbpedia.org/resource/People%27s_Democratic_Party_(Nigeria)>  .
+	
+	
+:lp a schema:Organization , foaf:Organization ;
+	rdfs:label "labourParty" ;
+	rdfs:comment "Labour Party" ;
+	skos:altLabel "LP" ;
+	v:hasAddress [ a v:Home;
+	v:country-name "Nigeria" ;
+	v:street-address "Dabo Shopping Mall, 2nd Floor, Plot 73 Ladoke Akintola Boulevard, Garki, Abuja" ];
+	v:hasTelephone [ a v:Home, v:Voice;
+	v:hasValue <tel:+2348033155775> ];
+	foaf:depiction <http://www.inecnigeria.org/inec/pix/LP.jpg> ;
+	owl:sameAs <http://dbpedia.org/resource/Labour_Party_(Nigeria)>  .
+	
+	
+:dpp a schema:Organization , foaf:Organization ;
+	rdfs:label "democraticPeoplesParty" ;
+	rdfs:comment "Democratic Peoples Party" ;
+	skos:altLabel "DPP" ;
+	v:hasAddress [ a v:Home;
+	v:country-name "Nigeria" ;
+	v:street-address "14, Zaire Crescent, Off Mississippi Road, Maitama, Abuja" ];
+	v:hasTelephone [ a v:Home, v:Voice;
+	v:hasValue <tel:+2348026807227>,<tel:+2347034012222> ];
+	foaf:depiction <http://inecnigeria.org/inec/pix/DPP.jpg>   .
+	
+:fresh a schema:Organization , foaf:Organization ;
+	rdfs:label "freshDemocraticParty" ;
+	rdfs:comment "FRESH DEMOCRATIC PARTY" ;
+	skos:altLabel "FRESH" ;
+	v:hasAddress [ a v:Home;
+	v:country-name "Nigeria" ;
+	v:street-address "NO. 4 PARHE CLOSE, AGUIYI IRONSI STREET MAITAMA - ABUJA" ];
+	v:hasTelephone [ a v:Home, v:Voice;
+	v:hasValue <tel:+2348057764363> ];
+	foaf:depiction <http://inecnigeria.org/inec/pix/FRESH.jpg>   .
+	
+:hdp a schema:Organization , foaf:Organization ;
+	rdfs:label "hopeDemocraticParty" ;
+	rdfs:comment "HOPE DEMOCRATIC PARTY" ;
+	skos:altLabel "HDP" ;
+	v:hasAddress [ a v:Home;
+	v:country-name "Nigeria" ;
+	v:street-address "PLOT 43 GWARINPA ESTATE ABUJA." ];
+	v:hasTelephone [ a v:Home, v:Voice;
+	v:hasValue <tel:+23480511776052>, <tel:+2348033122272> ];
+	foaf:depiction <http://inecnigeria.org/inec/pix/HDP.jpg>   .
+	
+:id a schema:Organization , foaf:Organization ;
+	rdfs:label "independentDemocrats" ;
+	rdfs:comment "INDEPENDENT DEMOCRATS" ;
+	skos:altLabel "ID" ;
+	v:hasAddress [ a v:Home;
+	v:country-name "Nigeria" ;
+	v:street-address "1385C Gurara Street, Off IBB Way, Maitama, Abuja" ];
+	v:hasTelephone [ a v:Home, v:Voice;
+	v:hasValue <tel:+2348065800000> ];
+	foaf:depiction <http://inecnigeria.org/inec/pix/ID.jpg>   .
+	
+:kp a schema:Organization , foaf:Organization ;
+	rdfs:label "kowaParty" ;
+	rdfs:comment "Kowa Party" ;
+	skos:altLabel "KP" ;
+	v:hasAddress [ a v:Home;
+	v:country-name "Nigeria" ;
+	v:street-address "129 Corner Shop, Beside Total Filling Station, Fed. Housinfg Est., Lugbe, Abuja" ];
+	v:hasTelephone [ a v:Home, v:Voice;
+	v:hasValue <tel:+2348033354443> ];
+	foaf:depiction <http://inecnigeria.org/inec/pix/KP.jpg>   .
+	
+:mppp a schema:Organization , foaf:Organization ;
+	rdfs:label "megaProgressivePeoplesParty" ;
+	rdfs:comment "Mega Progressive Peoples Party" ;
+	skos:altLabel "MPPP" ;
+	v:hasAddress [ a v:Home;
+	v:country-name "Nigeria" ;
+	v:street-address "1st Avenue, House 53, FHA, Lugbe, Abuja" ];
+	v:hasTelephone [ a v:Home, v:Voice;
+	v:hasValue <tel:+2347030147731> ];
+	foaf:depiction <http://inecnigeria.org/inec/pix/MPPP.jpg>   .
+	
+:ncp a schema:Organization , foaf:Organization ;
+	rdfs:label "nationalConscienceParty" ;
+	rdfs:comment "National Conscience Party" ;
+	skos:altLabel "NCP" ;
+	v:hasAddress [ a v:Home;
+	v:country-name "Nigeria" ;
+	v:street-address "1, Younde Street, Wuse Zone 6, Abuja" ];
+	v:hasTelephone [ a v:Home, v:Voice;
+	v:hasValue <tel:+2348033144131> ];
+	foaf:depiction <http://inecnigeria.org/inec/pix/NCP.jpg>   .
+	
+:nnpp a schema:Organization , foaf:Organization ;
+	rdfs:label "newNigeriaPeoplesParty" ;
+	rdfs:comment "New Nigeria Peoples Party" ;
+	skos:altLabel "NNPP" ;
+	v:hasAddress [ a v:Home;
+	v:country-name "Nigeria" ;
+	v:street-address "Plot MF 01, SDP Layout City, Centre Plaza, Suit G.F.01, Cadastral Area, Behind Noble Height Academy , Karu FCT, Abuja" ];
+	v:hasTelephone [ a v:Home, v:Voice;
+	v:hasValue <tel:+2348037133594> ];
+	foaf:depiction <http://inecnigeria.org/inec/pix/NNPP.jpg>   .
+	
+:pdc a schema:Organization , foaf:Organization ;
+	rdfs:label "peopleForDemocraticChange" ;
+	rdfs:comment "People For Democratic Change" ;
+	skos:altLabel "PDC" ;
+	v:hasAddress [ a v:Home;
+	v:country-name "Nigeria" ;
+	v:street-address "2 Bitou Street, off parakou strrt, off Aminu Kano Crescent, Wuse 2, Abuja" ];
+	v:hasTelephone [ a v:Home, v:Voice;
+	v:hasValue <tel:+2348023645376> ];
+	foaf:depiction <http://inecnigeria.org/inec/pix/PDC.jpg>   .
+	
+:pdm a schema:Organization , foaf:Organization ;
+	rdfs:label "peoplesDemocraticMovement" ;
+	rdfs:comment "Peoples Democratic Movement" ;
+	skos:altLabel "PDM" ;
+	v:hasAddress [ a v:Home;
+	v:country-name "Nigeria" ;
+	v:street-address "72 Mississippi Street, Maitama - Abuja" ];
+	v:hasTelephone [ a v:Home, v:Voice;
+	v:hasValue <tel:+2348036826868> ];
+	foaf:depiction <http://inecnigeria.org/inec/pix/PDM.jpg>   .
+	
+
+:ppa a schema:Organization , foaf:Organization ;
+	rdfs:label "progressivePeoplesAlliance" ;
+	rdfs:comment "Progressive Peoples Alliance" ;
+	skos:altLabel "PPA" ;
+	v:hasAddress [ a v:Home;
+	v:country-name "Nigeria" ;
+	v:street-address "Warri Street, off Emeka Anyoku Street, Area 11, Garki, Abuja" ];
+	v:hasTelephone [ a v:Home, v:Voice;
+	v:hasValue <tel:+2348023137834>, <tel:+2348094472176> ];
+	foaf:depiction <http://inecnigeria.org/inec/pix/PPA.jpg>   .
+	
+
+:ppn a schema:Organization , foaf:Organization ;
+	rdfs:label "peoplesPartyofNigeria" ;
+	rdfs:comment "Peoples Party of Nigeria" ;
+	skos:altLabel "PPN" ;
+	v:hasAddress [ a v:Home;
+	v:country-name "Nigeria" ;
+	v:street-address "House 43, 6th Avenue, Gwarimpa Estate, Abuja Model City" ];
+	v:hasTelephone [ a v:Home, v:Voice;
+	v:hasValue <tel:+2347037674661>, <tel:+2348062471148> ];
+	foaf:depiction <http://inecnigeria.org/inec/pix/PPN.jpg>   .
+	
+
+:sdp a schema:Organization , foaf:Organization ;
+	rdfs:label "socialDemocraticParty" ;
+	rdfs:comment "Social Democratic Party" ;
+	skos:altLabel "SDP" ;
+	v:hasAddress [ a v:Home;
+	v:country-name "Nigeria" ;
+	v:street-address "Plot 2105 Herbert Marcauly Way, opp. Sky Memorial Plaza, Block B3, Wuse zone 6, Abuja" ];
+	v:hasTelephone [ a v:Home, v:Voice;
+	v:hasValue <tel:+2348036203435>, <tel:+2348089367398> ];
+	foaf:depiction <http://inecnigeria.org/inec/pix/SDP.jpg>   .
+	
+
+:udp a schema:Organization , foaf:Organization ;
+	rdfs:label "unitedDemocraticParty" ;
+	rdfs:comment "United Democratic Party" ;
+	skos:altLabel "UDP" ;
+	v:hasAddress [ a v:Home;
+	v:country-name "Nigeria" ;
+	v:street-address "6 Gnassingbe Eyedema Street, Asokoro District, Abuja" ];
+	v:hasTelephone [ a v:Home, v:Voice;
+	v:hasValue <tel:+2348033113639>, <tel:+2348055302788> ];
+	foaf:depiction <http://inecnigeria.org/inec/pix/UDP.jpg>   .
+	
+
+:upn a schema:Organization , foaf:Organization ;
+	rdfs:label "unityPartyOfNigeria" ;
+	rdfs:comment "Unity Party of Nigeria" ;
+	skos:altLabel "UPN" ;
+	v:hasAddress [ a v:Home;
+	v:country-name "Nigeria" ;
+	v:street-address "Block 10, Flat 1, Amasuma Close, Area 2, Section 1, Garki - Abuja" ];
+	v:hasTelephone [ a v:Home, v:Voice;
+	v:hasValue <tel:+2347061648215>, <tel:+2348023751619> ];
+	foaf:depiction <http://inecnigeria.org/inec/pix/UPN.jpg>   .
+	
+
+:upp a schema:Organization , foaf:Organization ;
+	rdfs:label "unitedProgressiveParty" ;
+	rdfs:comment "United Progressive Party" ;
+	skos:altLabel "UPP" ;
+	v:hasAddress [ a v:Home;
+	v:country-name "Nigeria" ;
+	v:street-address "The Doom N-Glory Centre, Plot 412, Cadestral Zone, CBD, Abuja" ];
+	v:hasTelephone [ a v:Home, v:Voice;
+	v:hasValue <tel:+2347030521292> ];
+	foaf:depiction <http://inecnigeria.org/inec/pix/UPP.jpg>   .
+	
+
