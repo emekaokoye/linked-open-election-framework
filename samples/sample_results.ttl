@@ -1,0 +1,73 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix election: <http://linkedopendatang.com/schemas/election/> .
+@prefix : <#> .
+
+<>
+    rdfs:comment "Results of the 2014 Governorship Election for Ekiti State Nigeria" ;
+    dcterms:created "2014-12-10"^^<http://www.w3.org/2001/XMLSchema#date> ;
+    foaf:maker <http://id.myopenlink.net/dataspace/person/emekaokoye#this> ;
+    rdf:type foaf:Document ;
+    dcterms:hasFormat "text/turtle" ;
+	dcterms:source <http://www.inecnigeria.org/?inecnews=result-of-ekiti-state-governorship-election-june-21-2014> ;
+    foaf:page <http://www.inecnigeria.org/?inecnews=result-of-ekiti-state-governorship-election-june-21-2014> ;
+    rdfs:label "2014EkitiGovernorshipElectionResult" .
+
+##	
+## setup the poll
+##	
+
+:ekitigov2014 a election:Poll ;
+	rdfs:label "ekitiGovernorResults2014"@en-US ;
+	rdfs:comment "2014 Ekiti State Governorship Election "@en-US ;
+	election:hasElectionDate "2014-06-21"^^xsd:date ;
+	election:hasConstituency <http://dbpedia.org/resource/Ekiti_State> ;
+	election:hasRegisteredVoters "733766"^^xsd:integer ;
+	election:hasAccreditedVoters "369257"^^xsd:integer ;
+	election:hasTotalBallots "360455"^^xsd:integer ;
+	election:hasInvalidBallots "10089"^^xsd:integer ;
+	election:hasValidBallots "350366"^^xsd:integer ;
+	election:hasViolence "false"^^xsd:boolean ;
+	election:isCandidate :candidate1, :candidate2, :candidate3 ;
+	election:hasElectoralFraud "false"^^xsd:boolean .
+	
+##	
+## setup the candidates
+##	
+	
+:candidate1 a election:Candidate ;
+	rdfs:label "candidate1"@en-US ;
+	rdfs:comment "Candidate 1"@en-US ;
+	foaf:givenName "Ayodele Peter"@en-US ;
+	foaf:familyName "Fayose"@en-US ;
+	election:isOfPoliticalParty <http://linkedopendatang.com/entity/polparties.ttl#pdp> ;
+	election:hasVotes "203090"^^xsd:integer ;
+	election:isElected "true"^^xsd:boolean .
+	
+	
+:candidate2 a election:Candidate ;
+	rdfs:label "candidate2"@en-US ;
+	rdfs:comment "Candidate 2"@en-US ;
+	foaf:givenName "John Olukayode"@en-US ;
+	foaf:familyName "Fayemi"@en-US ;
+	election:isOfPoliticalParty <http://linkedopendatang.com/entity/polparties.ttl#apc> ;
+	election:hasVotes "120433"^^xsd:integer ;
+	election:isElected "false"^^xsd:boolean .
+	
+	
+:candidate3 a election:Candidate ;
+	rdfs:label "candidate3"@en-US ;
+	rdfs:comment "Candidate 3"@en-US ;
+	foaf:givenName "Bamidele Michael"@en-US ;
+	foaf:familyName "Opeyemi"@en-US ;
+	election:isOfPoliticalParty <http://linkedopendatang.com/entity/polparties.ttl#lp> ;
+	election:hasVotes "18135"^^xsd:integer ;
+	election:isElected "false"^^xsd:boolean .
+	
+	
+	
+	
+	
