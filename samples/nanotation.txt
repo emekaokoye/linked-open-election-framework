@@ -1,0 +1,85 @@
+	{
+
+		@prefix schema:  <http://schema.org/> .
+		@prefix election: <http://linkedopendatang.com/schemas/election/> .
+		
+		<>
+		a schema:NewsArticle, election:Poll ;
+		
+		schema:name "Election Results";
+		schema:headline "Election Results";
+
+		schema:author [
+				  a schema:Person ;
+				  schema:name "Emeka Okoye" ;
+				  schema:url <https://plus.google.com/+EmekaOkoye/> ;
+		
+		]	;
+		schema:creator [
+				  a schema:Person ;
+				  schema:name "Emeka Okoye" ;
+				  schema:url <https://plus.google.com/+EmekaOkoye/> ;
+		
+		]	;
+		
+		schema:about [
+				  a schema:Thing ;
+				  schema:name "Election" ;
+				  schema:url <http://en.wikipedia.org/wiki/Election> ;
+		
+		]	, 
+		
+		[
+				  a schema:Thing ;
+				  schema:name "Elections in Nigeria" ;
+				  schema:url <http://en.wikipedia.org/wiki/Elections_in_Nigeria> ;
+		
+		]	; 
+		
+		schema:articleBody "your story or article goes here" ;
+		schema:sourceOrganization 	[
+				  a schema:Organization ;
+				  schema:name "OpenDataNG" ;
+				  schema:url <http://linkedopendatang.blogspot.com> ;
+		
+		]	; 
+
+		schema:provider [
+				  a schema:Organization ;
+				  schema:name "OpenDataNG" ;
+				  schema:url <http://linkedopendatang.blogspot.com> ;
+		
+		]	;  
+		
+		election:hasElectionDate "2014-06-21"^^xsd:date ;
+		election:hasConstituency <http://dbpedia.org/resource/Ekiti_State> ;
+		election:hasRegisteredVoters "733766"^^xsd:integer ;
+		election:hasAccreditedVoters "369257"^^xsd:integer ;
+		election:hasTotalBallots "360455"^^xsd:integer ;
+		election:hasInvalidBallots "10089"^^xsd:integer ;
+		election:hasValidBallots "350366"^^xsd:integer ;
+		election:hasViolence "false"^^xsd:boolean ;
+		election:isCandidate <#candidate1>, <#candidate2>, <#candidate3> ;
+		election:hasElectoralFraud "false"^^xsd:boolean .
+		
+		<#candidate1> a election:Candidate ;
+		schema:name "Ayodele Peter Fayose" ;
+		election:isOfPoliticalParty <http://linkedopendatang.com/entity/polparties.ttl#pdp> ;
+		election:hasVotes "203090"^^xsd:integer ;
+		election:isElected "true"^^xsd:boolean .
+
+		<#candidate2> a election:Candidate ;
+		schema:name "John Olukayode Fayemi" ;
+		election:isOfPoliticalParty <http://linkedopendatang.com/entity/polparties.ttl#apc> ;
+		election:hasVotes "120433"^^xsd:integer ;
+		election:isElected "false"^^xsd:boolean .
+		
+		
+		<#candidate3> a election:Candidate ;
+		schema:name "Bamidele Michael Opeyemi" ;
+		election:isOfPoliticalParty <http://linkedopendatang.com/entity/polparties.ttl#lp> ;
+		election:hasVotes "18135"^^xsd:integer ;
+		election:isElected "false"^^xsd:boolean .
+		
+	
+	}
